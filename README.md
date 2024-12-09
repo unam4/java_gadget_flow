@@ -545,6 +545,20 @@ public static HashMap<Object, Object> map2equals(Object o, Object o2) throws Exc
     }
 ```
 
+### css->hashcode
+
+```java
+    public static void Css2hasocde(Object obj) throws Exception {
+        CSS css = new CSS();
+        Hashtable hashtable = new Hashtable();
+        hashtable.put("",obj);
+        utils.setFieldValue(css, "valueConvertor", hashtable);
+        utils.setFieldValue(css, "baseFontSize", 1);
+    }
+```
+
+
+
 
 
 
